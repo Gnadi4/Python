@@ -504,3 +504,43 @@
 # print(balance)
 # commission, balance = withdraw_night(balance, 500)
 # print("commision {0}, remaining {1}".format(commission, balance))
+
+### 기본값 ###
+
+# def profile(name, age, main_lang):
+#     print("name : {0}\tage : {1}\tmain lang : {2}" \
+#         .format(name,age,main_lang))
+
+# profile("you", 20, "python")
+# profile("kim", 25, "java")
+
+# def profile(name, age=17, main_lang="python"):
+#     print("name : {0}\tage : {1}\tmain lang : {2}" \
+#         .format(name,age,main_lang))
+
+# profile("you")
+# profile("kim")
+
+### 키워드 값 ###
+
+# def profile(name, age, main_lang):
+#     print(name, age, main_lang)
+
+# profile(name = "you", main_lang= "python", age = 20)
+
+### 가변 인자 ###
+
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     ## end = " " ==> 줄바꿈 하지 않음
+#     print("name : {0}\tage : {1}\t".format(name,age), end = " ")
+#     print(lang1, lang2, lang3, lang4, lang5)
+
+def profile(name, age, *language):
+    ## end = " " ==> 줄바꿈 하지 않음
+    print("name : {0}\tage : {1}\t".format(name,age), end = " ")
+    for lang in language:
+        print(lang, end=" ")
+    print()
+
+profile("you", 20, "python", "java", "c", "c++", "c#", "javascript")
+profile("kim", 25, "kotlin", "swift")
