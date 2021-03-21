@@ -535,12 +535,36 @@
 #     print("name : {0}\tage : {1}\t".format(name,age), end = " ")
 #     print(lang1, lang2, lang3, lang4, lang5)
 
-def profile(name, age, *language):
-    ## end = " " ==> 줄바꿈 하지 않음
-    print("name : {0}\tage : {1}\t".format(name,age), end = " ")
-    for lang in language:
-        print(lang, end=" ")
-    print()
+# def profile(name, age, *language):
+#     ## end = " " ==> 줄바꿈 하지 않음
+#     print("name : {0}\tage : {1}\t".format(name,age), end = " ")
+#     for lang in language:
+#         print(lang, end=" ")
+#     print()
 
-profile("you", 20, "python", "java", "c", "c++", "c#", "javascript")
-profile("kim", 25, "kotlin", "swift")
+# profile("you", 20, "python", "java", "c", "c++", "c#", "javascript")
+# profile("kim", 25, "kotlin", "swift")
+
+### 지역변수와 전역변수 ###
+
+# gun = 10
+
+# def checkpoint(soldiers): #경계근무
+#     global gun # 전역 공간에 있는 gun 사용
+#     gun = gun - soldiers
+#     print("remain : {0}".format(gun))
+
+# def checkpoint_ret(gun, soldiers):
+#     gun = gun - soldiers
+#     print("remain : {0}".format(gun))
+#     return gun
+
+# print("totla gun : {0}".format(gun))
+# gun = checkpoint_ret(gun, 2)
+# print("remain gun : {0}".format(gun))
+
+### quiz 6 ###
+
+
+
+def std_weight(height, gender):
