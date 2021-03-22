@@ -565,6 +565,90 @@
 
 ### quiz 6 ###
 
+# def std_weight(height, gender):
+#     if gender == 1:
+#         return height*height*22/10000
+#     else:
+#         return height*height*21/10000
+    
 
+# stdw = std_weight(175,1)
+# stdw = round(stdw,2)
+# print("height is {0} std_weight is {1}".format(175, stdw))
 
-def std_weight(height, gender):
+### 표준 입출력 ###
+
+# print("python", "java", sep=",", end="?")
+# print("funny?")
+
+# import sys
+# print("python", "java", file=sys.stdout)
+# print("python", "java", file=sys.stderr)
+
+# scores = {"math":0, "english":50, "coding":100}
+# for subject, score in scores.items():
+#     # print(subject, score)
+#     print(subject.ljust(8), str(score).rjust(4), sep=":")
+
+# for num in range(1, 21):
+#     print("waiting num : " + str(num).zfill(3))
+
+# answer = input("input anything : ")
+# print(type(answer))
+# print("input value is " + answer + "..")
+
+### 다양한 출력 포멧 ###
+
+# print("{0: >10}".format(500))
+
+# print("{0: >+10}".format(500))
+# print("{0: >+10}".format(-500))
+
+# print("{0:_<10}".format(500))
+
+# print("{0:,}".format(100000000000))
+
+# print("{0:+,}".format(-1000000000000))
+
+# print("{0:^<+30,}".format(1000000000000))
+
+# print("{0:f}".format(5/3))
+
+# print("{0:.2f}".format(5/3))
+
+### 파일 입출력 ###
+
+# score_file = open("score.txt", "w", encoding="utf8")
+# print("math : 0", file=score_file)
+# print("english : 50", file=score_file)
+# score_file.close()
+
+# score_file = open("score.txt", "a", encoding="utf8")
+# score_file.write("science : 80")
+# score_file.write("\ncoding : 100")
+# score_file.close()
+
+score_file = open("score.txt", "r", encoding="utf8")
+print(score_file.read())
+score_file.close()
+
+score_file = open("score.txt","r", encoding="utf8")
+print(score_file.readline(), end="")
+print(score_file.readline(), end = "")
+print(score_file.readline(), end = "") 
+print(score_file.readline(), end = "")
+score_file.close()
+
+score_file = open("score.txt", "r", encoding="utf8")
+while True:
+    line = score_file.readline()
+    if not line :
+        break
+    print(line, end="")
+score_file.close()
+
+score_file = open("score.txt", "r", encoding="utf8")
+lines = score_file.readlines()
+for line in lines:
+    print(line, end = "")
+score_file.close()
