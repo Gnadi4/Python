@@ -628,27 +628,63 @@
 # score_file.write("\ncoding : 100")
 # score_file.close()
 
-score_file = open("score.txt", "r", encoding="utf8")
-print(score_file.read())
-score_file.close()
+# score_file = open("score.txt", "r", encoding="utf8")
+# print(score_file.read())
+# score_file.close()
 
-score_file = open("score.txt","r", encoding="utf8")
-print(score_file.readline(), end="")
-print(score_file.readline(), end = "")
-print(score_file.readline(), end = "") 
-print(score_file.readline(), end = "")
-score_file.close()
+# score_file = open("score.txt","r", encoding="utf8")
+# print(score_file.readline(), end="")
+# print(score_file.readline(), end = "")
+# print(score_file.readline(), end = "") 
+# print(score_file.readline(), end = "")
+# score_file.close()
 
-score_file = open("score.txt", "r", encoding="utf8")
-while True:
-    line = score_file.readline()
-    if not line :
-        break
-    print(line, end="")
-score_file.close()
+# score_file = open("score.txt", "r", encoding="utf8")
+# while True:
+#     line = score_file.readline()
+#     if not line :
+#         break
+#     print(line, end="")
+# score_file.close()
 
-score_file = open("score.txt", "r", encoding="utf8")
-lines = score_file.readlines()
-for line in lines:
-    print(line, end = "")
-score_file.close()
+# score_file = open("score.txt", "r", encoding="utf8")
+# lines = score_file.readlines()
+# for line in lines:
+#     print(line, end = "")
+# score_file.close()
+
+### pickle ###
+
+# import pickle
+# profile_file = open("profile.pickle","wb")
+# profile = {"name":"park", "age":30, "hobby":["soccer","golf","coding"]}
+# print(profile)
+# pickle.dump(profile, profile_file) #profile 에 있는 정보를 file에 저장
+# profile_file.close()
+
+# profile_file = open("profile.pickle","rb")
+# profile = pickle.load(profile_file)
+# print(profile)
+# profile_file.close()
+
+### with ###
+
+# import pickle
+
+# with open("profile.pickle","rb") as profile_file:
+#     print(pickle.load(profile_file))
+
+# with open("study.txt","w",encoding = "utf8") as study_file:
+#     study_file.write("hi my name is H")
+
+# with open("study.txt","r",encoding = "utf8") as study_file:
+#     print(study_file.read())
+
+### quiz 7 ###
+
+# for i in range(1,51):
+#     name = "./test_file/"+str(i)+"주차"
+#     with open(name, "w", encoding = "utf8") as study_file:
+#         tmp = str(i) + "주차 주간보고\n부서 :\n이름 :\n업무 요약 :"
+#         study_file.write(tmp)
+
